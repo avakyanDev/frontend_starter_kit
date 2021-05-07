@@ -1,0 +1,33 @@
+@mixin font-face(
+  $font-family,
+  $file-path,
+  $font-weight: normal,
+  $font-style: normal
+) {
+  @font-face {
+    font-weight: $font-weight;
+    font-family: $font-family;
+    font-style: $font-style;
+    src: url("#{$file-path}.woff2"), url("#{$file-path}.woff");
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == laptop {
+    @media (max-width: 1199.98px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (max-width: 991.98px) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+}

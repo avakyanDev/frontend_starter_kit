@@ -1,0 +1,18 @@
+# production
+/dist
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+node_modules
+.idea/

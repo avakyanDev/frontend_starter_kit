@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    title #{title}
+    meta(name="theme-color" content="#fff")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    link(rel="shortcut ", href="favicon.ico", type="image/x-icon")
+    link(href="assets/css/main.css", rel="stylesheet")
+  body.root
+    block page
+      .page
+        include ../../blocks/modules/header/header
+        main.content
+          block content
+        include ../../blocks/modules/footer/footer
+    script(src="assets/js/vendor.js")
+    script(src="assets/js/main.js")
+
